@@ -2,11 +2,15 @@ import java.util.ArrayList;
 
 public class TaskManager {
     public ArrayList<Task> tasks = new ArrayList<>();
-    private int nextId = 0;
+    private int nextId = 1;
 
     public void addTask(String description) {
         Task newTask = new Task(nextId++, description);
         tasks.add(newTask);
+    }
+
+    public void addTask(Task task) {
+        tasks.add(task);
     }
 
     public void listTasks() {
@@ -25,7 +29,11 @@ public class TaskManager {
         tasks.removeIf(t -> t.getId() == id);
     }
 
-    public ArrayList<Task> getTasks(){
+    public ArrayList<Task> getTasks() {
         return tasks;
+    }
+
+    public void alignIds() {
+        nextId = tasks.size() + 1;
     }
 }
