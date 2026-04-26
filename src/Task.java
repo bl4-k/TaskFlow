@@ -3,8 +3,6 @@ public class Task {
     private String description;
     private boolean completed;
 
-    
-
     public Task(int id, String description) {
         this.id = id;
         this.description = description;
@@ -33,7 +31,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task [ID=" + id + ", Description=" + description + ", Completed=" + completed + "]";
+        return "ID: " + id + ", Description: " + description + ", Completed: " + completed;
     }
 
 }
