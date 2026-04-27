@@ -27,11 +27,16 @@ This project was built to strengthen core Java fundamentals, especially object-o
 
 ## How to Run
 
-1. Compile
+### 1. Compile
+```bash
 javac -d bin src/*.java
+```
 
-2. Run
+### 2. Run
+
+```bash
 java -cp out Main
+```
 
 ---
 
